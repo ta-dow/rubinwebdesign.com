@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+    	<title>Rubin Design</title>
+    	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="static/css/slideshow.base.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/main.css" />
+        <script>
+            document.documentElement.className = "js";
+            var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+            supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+        </script>
+
+        <!-- Decorative Background -->
+        <link rel="stylesheet" type="text/css" href="static/css/db-base.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/db-demo5.css" />
+        <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+        </script>
+
+        <style type="text/css">
+            body, html {
+                color: #fcfcfc;
+                overflow: hidden;
+            }
+        </style>
+
+	</head>
+
+	<body class="loading demo-5">
+        <svg class="hidden">
+            <symbol id="icon-arrow" viewBox="0 0 24 24">
+                <title>arrow</title>
+                <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+            </symbol>
+            <symbol id="icon-caret" viewBox="0 0 16 24">
+                <title>caret</title>
+                <path d="M15.45 2.8L12.65 0l-12 12 12 12 2.8-2.8-9.2-9.2z"/>
+            </symbol>
+        </svg>
+        <main>
+            <div class="slideshow">
+                <!-- Photography -->
+                <div class="slide">
+                    <div class="slide__wrap">
+                        <div class="slide__img" style="background-image: url(static/images/nep-donkeys.jpg)"></div>
+                        <div class="slide__title-wrap">
+                        </div>
+                    </div>
+                </div>
+                <!-- Web Design -->
+                <div class="slide">
+                    <div class="slide__wrap">
+                        <div class="slide__img"></div>
+                            <div class="content">
+                                <canvas class="scene scene--full" id="scene"></canvas>
+                                <div class="content__inner">
+                                </div>
+                            </div>
+                        <div class="slide__title-wrap"></div>
+                    </div>
+                </div>
+                <!-- Contact -->
+                <div class="slide">
+                    <div class="slide__wrap">
+                        <div class="slide__img" style="background-image: url(static/images/cam-windowsill.jpg);"></div>
+                        <div class="slide__title-wrap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="boxnav">
+                <button class="boxnav__item boxnav__item--prev">
+                    <svg class="icon icon--caret">
+                        <use xlink:href="#icon-caret"></use>
+                    </svg>
+                </button>
+                <div class="boxnav__item boxnav__item--label">
+                    <span class="boxnav__label boxnav__label--current">1</span>
+                    <span class="boxnav__label boxnav__label--total"></span>
+                </div>
+                <button class="boxnav__item boxnav__item--next">
+                    <svg class="icon icon--caret-rot">
+                        <use xlink:href="#icon-caret"></use>
+                    </svg>
+                </button>
+            </nav>
+        </main>
+
+
+        <div class="white-banner">rubin design<br><span>web design & photography</span></div>
+
+        <nav class="slideshow-control">
+            <a href="photography.html">photography</a>
+            <a href="design.html">web design</a>
+            <a href="contact.html">contact us</a>
+        </nav>
+        
+
+        <script src="static/js/imagesloaded.pkgd.min.js"></script>
+        <script src="static/js/TweenMax.min.js"></script>
+        <script src="static/js/demo.js"></script>
+
+        <script src="static/js/db-demo.js"></script>
+        <script src="static/js/db-three.min.js"></script>
+        <script src="static/js/db-perlin.js"></script>
+        <script src="static/js/db-TweenMax.min.js"></script>
+        <script src="static/js/db-demo5.js"></script>
+	</body>
+</html>
