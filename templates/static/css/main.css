@@ -233,8 +233,8 @@ a:hover {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-   align-self: start; 
-  margin-top: 64px;
+  align-self: start;
+  margin-top: 77px;
 }
 .toc > ul {
   padding: 0;
@@ -254,7 +254,7 @@ a:hover {
   border-left: 3px solid #e88945;
   margin-left: 30px;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .toc ul {
         display: none;
     }
