@@ -65,17 +65,15 @@ scene.add( sphere );
 
 function render(a) {
     requestAnimationFrame(render);
-    if (window.slideshow.current == 1 || window.slideshow.nextSlidePos == 1) {
-        for(var i = 0; i < geometry.vertices.length; i++){
-            var vector = geometry.vertices[i];
-            var ratio = noise.simplex3((vector._o.x*0.01), (vector._o.y*0.01)+(a*0.0005), (vector._o.z*0.01));
-            vector.copy(vector._o);
-            vector.multiplyScalar(1 + (ratio*0.1));
-            vector.multiplyScalar(1);
-        }
-        geometry.verticesNeedUpdate = true;
-        renderer.render(scene, camera);
+    for(var i = 0; i < geometry.vertices.length; i++){
+        var vector = geometry.vertices[i];
+        var ratio = noise.simplex3((vector._o.x*0.01), (vector._o.y*0.01)+(a*0.0005), (vector._o.z*0.01));
+        vector.copy(vector._o);
+        vector.multiplyScalar(1 + (ratio*0.1));
+        vector.multiplyScalar(1);
     }
+    geometry.verticesNeedUpdate = true;
+    renderer.render(scene, camera);
 }
 
 function onResize() {

@@ -6,7 +6,7 @@ html {
 	font-family: "Montserrat", sans-serif;
 	font-size: 20px;
 	background-color: #fcfcfc;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 nav {
     letter-spacing: 2px;
@@ -46,18 +46,18 @@ a:hover {
 .white-banner {
     left: 50%;
     top: 50%;
-    margin: -21.5px 0 0 -106.5px;
+    /* margin-left: -124.5px; */
+    margin: -70px 0 0 -155px;
     position: fixed;
     text-align: center;
     z-index: 1000;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 35px;
-    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 40px;
 }
 .white-banner span {
-    font-size: 13px;
-    letter-spacing: 2px;
+    font-size: 15px;
+    letter-spacing: 4px;
 }
 .black-banner {
     margin-top: 100px;
@@ -74,23 +74,23 @@ a:hover {
     letter-spacing: 2px;
 }
 .effect-underline:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: -10px; /*originally 0*/
-  left: 0;
-  background-color: #000;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -10px; /*originally 0*/
+    left: 0;
+    background-color: #000; 
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 .effect-underline:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .main-image {
@@ -101,10 +101,11 @@ a:hover {
 }
 .img-fluid {
     border-radius: 6px;
+    vertical-align: super;
 }
 .mac-image {
     margin: 40px 0 40px 0;
-    max-width: 1000px;
+    /*max-width: 1000px;*/
     width: 100%;
 }
 .header-image {
@@ -115,9 +116,9 @@ a:hover {
     margin-top: 50px;
 }
 .leaf-image {
-    width: 63px;
+    width: 16%;
 }
-.slideshow-control {
+.main-navbar {
     left: 0;
     width: 100%;
     position: absolute;
@@ -128,6 +129,17 @@ a:hover {
     text-transform: uppercase;
     color: #fcfcfc;
     font-size: 17px;
+    letter-spacing: 8px;
+}
+.text-link {
+    text-decoration: underline;
+}
+.text-link:hover {
+    color: #e88945;
+    text-decoration: underline;
+}
+.animation-image {
+    height: 100px;
 }
 
 /*About Us*/
@@ -188,6 +200,47 @@ a:hover {
 .fancy-button:hover {
     color: #fcfcfc;
     background-color: #e88945;
+}
+
+/*Portfolio Slidshow*/
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin: -22px -70px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.next {
+    right: 0;
+}
+.prev {
+    left: 0;
+}
+.prev:hover, .next:hover {
+    transform: scale(2, 2);
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
 }
 
 /*Slide Down Text Overlay*/
@@ -283,6 +336,7 @@ a:hover {
     width: 100%;
     text-align: center;
     border-radius: 6px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.02);
 }
 
 .grid figure img {
@@ -344,7 +398,6 @@ figure.effect-bubba {
 figure.effect-bubba img {
     opacity: 1;
     transition: opacity 0.35s;
-    box-shadow: 2px 4px 10px -5px rgba(148,148,148,1);
 }
 
 figure.effect-bubba:hover img {
