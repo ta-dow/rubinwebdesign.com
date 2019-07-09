@@ -33,7 +33,7 @@ main {
 	align-content: center;
 	margin: 0 auto;
 	min-height: 100vh;
-	filter: brightness(40%);
+	filter: brightness(50%);
 }
 
 /* Canvas positions */
