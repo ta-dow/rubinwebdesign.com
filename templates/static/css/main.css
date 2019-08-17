@@ -223,7 +223,8 @@ a:hover {
     background-color: white;
 }
 .logo {
-    margin: 30px;
+    margin: 40px;
+    width: 60px;
 }
 
 .fancy-button {
