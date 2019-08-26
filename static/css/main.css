@@ -90,6 +90,19 @@ a:hover {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+/*highlight*/
+.underline-highlight {
+    padding: 0 5px;
+    background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), rgba(232, 137, 69, 0.5) calc(50% - 8px), rgba(232, 137, 69, 0.5) 100% );
+    transition: background-position 0.25s ease-in-out, padding 0.25s ease-in-out;
+    background-size: 100% 260%;
+    background-position: 0 0;
+}
+.underline-highlight:hover {
+    padding: 2px 5px 4px 5px;
+    background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), rgba(232, 137, 69, 0.7) calc(50% - 8px), rgba(232, 137, 69, 0.7) 100% );
+    background-position: 0 100%;
+}
 
 .main-image {
     width: 100%;
@@ -172,13 +185,13 @@ a:hover {
         top: 65%;
     }
 }
-.text-link {
+/*.text-link {
     text-decoration: underline;
 }
 .text-link:hover {
     color: #e88945;
     text-decoration: underline;
-}
+}*/
 .animation-image {
     height: 100px;
 }

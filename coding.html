@@ -115,16 +115,18 @@
             }
         }*/
 
-
         /*highlight*/
-        .underline--magical {
-            background-repeat: no-repeat;
-            background-size: 100% 0.15em;
-            background-position: 0 105%; /*0 88%*/
-            transition: background-size 0.25s ease-in;
+        .underline-highlight {
+            padding: 0 5px;
+            background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), rgba(232, 137, 69, 0.5) calc(50% - 8px), rgba(232, 137, 69, 0.5) 100% );
+            transition: background-position 0.25s ease-in-out, padding 0.25s ease-in-out;
+            background-size: 100% 260%;
+            background-position: 0 0;
         }
-        .underline--magical:hover {
-            background-size: 100% 100%;
+        .underline-highlight:hover {
+            padding: 2px 5px 4px 5px;
+            background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), rgba(232, 137, 69, 0.7) calc(50% - 8px), rgba(232, 137, 69, 0.7) 100% );
+            background-position: 0 100%;
         }
         /*arrow*/
         .arrow {
@@ -249,7 +251,7 @@
                 <li>images</li>
             </ul>
         <p>
-            The following is the basic structure of an HTML file. I do all of my web development on the platform <a href="https://www.sublimetext.com/3" target="_blank" rel="noopener"><span class="underline--magical">Sublime</span></a>, and use <a href="https://getbootstrap.com/" target="_blank" rel="noopener"><span class="underline--magical">Bootstrap</span></a> to facilitate making the site responsive, ie. causing the page content to resize as the width of the page changes. The general layout within my NAMEOFPROJECT.com folder is: html files &amp; <strong>static</strong> folder &gt; <strong>css</strong> folder &amp; <strong>images</strong> folder. Therefore, in order to link to my CSS Bootstrap file, for instance, I would need to specify its location relative to my HTML files, in this case <code>static/css/bootstrap.min.css</code>.</p><p><img src="https://i.imgur.com/C1juo8L.png" alt="">
+            The following is the basic structure of an HTML file. I do all of my web development on the platform <a href="https://www.sublimetext.com/3" target="_blank" rel="noopener"><span class="underline-highlight">Sublime</span></a>, and use <a href="https://getbootstrap.com/" target="_blank" rel="noopener"><span class="underline-highlight">Bootstrap</span></a> to facilitate making the site responsive, ie. causing the page content to resize as the width of the page changes. The general layout within my NAMEOFPROJECT.com folder is: html files &amp; <strong>static</strong> folder &gt; <strong>css</strong> folder &amp; <strong>images</strong> folder. Therefore, in order to link to my CSS Bootstrap file, for instance, I would need to specify its location relative to my HTML files, in this case <code>static/css/bootstrap.min.css</code>.</p><p><img src="https://i.imgur.com/C1juo8L.png" alt="">
         </p>
         <br>
         <h2 id="First-exciting-things-learned">
@@ -263,7 +265,7 @@
         <br>
         <h4 id="Native-Campervans">
             <a class="anchor hidden-xs" href="#Native-Campervans" title="Native-Campervans"></a>
-            <a href="https://www.nativecampervans.com/" target="_blank" rel="noopener"><span class="underline--magical">Native Campervans</span></a>
+            <a href="https://www.nativecampervans.com/" target="_blank" rel="noopener"><span class="underline-highlight">Native Campervans</span></a>
         </h4>
         <p>
             <img src="https://i.imgur.com/0qbwDbb.jpg" alt="">
@@ -272,7 +274,7 @@
         <h4 id="Donal-Skehan">
             <a class="anchor hidden-xs" href="#Donal-Skehan" title="Donal-Skehan">
             </a>
-            <a href="http://www.donalskehan.com/" target="_blank" rel="noopener"><span class="underline--magical">Donal Skehan</span></a>
+            <a href="http://www.donalskehan.com/" target="_blank" rel="noopener"><span class="underline-highlight">Donal Skehan</span></a>
         </h4>
         <p>
             <img src="https://i.imgur.com/aPZsg1V.jpg" alt="">
@@ -281,14 +283,14 @@
         <h4 id="The-Discoverer">
             <a class="anchor hidden-xs" href="#The-Discoverer" title="The-Discoverer">
             </a>
-            <a href="https://www.thediscoverer.com/" target="_blank" rel="noopener"><span class="underline--magical">The Discoverer</span></a>
+            <a href="https://www.thediscoverer.com/" target="_blank" rel="noopener"><span class="underline-highlight">The Discoverer</span></a>
         </h4>
         <p>
             <img src="https://i.imgur.com/dyK5QGY.jpg" alt="">
         </p>
         <hr>
         <p>
-            I was shocked to find out that hundreds of sites offer open-source code where you can download effects for free. One of the first that I merged into my own webpage was a <a href="https://tympanus.net/Development/HoverEffectIdeas/" target="_blank" rel="noopener"><span class="underline--magical">hover effect by codrops</span></a>. I started off by downloading the source via the article and deleting elements from the files until only the effect that I needed remained. Only then did I add it to my pre-existing code.
+            I was shocked to find out that hundreds of sites offer open-source code where you can download effects for free. One of the first that I merged into my own webpage was a <a href="https://tympanus.net/Development/HoverEffectIdeas/" target="_blank" rel="noopener"><span class="underline-highlight">hover effect by codrops</span></a>. I started off by downloading the source via the article and deleting elements from the files until only the effect that I needed remained. Only then did I add it to my pre-existing code.
         </p>
         <br>
         <h2 id="Hardest-thing-to-do-so-far">
@@ -300,7 +302,7 @@
         </p>
         <br>
         <p>
-            Huge thanks to <a href="https://nicksweeting.com" target="_blank" rel="noopener"><span class="underline--magical">Nick</span></a> for introducing me to this wild world of coding.
+            Huge thanks to <a href="https://nicksweeting.com" target="_blank" rel="noopener"><span class="underline-highlight">Nick</span></a> for introducing me to this wild world of coding.
         </p>
         <br>
         <hr>
@@ -509,58 +511,6 @@
                     scrollTop: $(document.body)[0].scrollHeight
                 }, 100, "linear");
             }
-
-
-            // Text highlight
-
-            // VARIABLES
-            const magicalUnderlines = Array.from(document.querySelectorAll('.underline--magical'));
-
-            const gradientAPI = 'https://gist.githubusercontent.com/wking-io/3e116c0e5675c8bcad8b5a6dc6ca5344/raw/4e783ce3ad0bcd98811c6531e40256b8feeb8fc8/gradient.json';
-
-            // HELPER FUNCTIONS
-
-            // 1. Get random number in range. Used to get random index from array.
-            const randNumInRange = max => Math.floor(Math.random() * (max - 1));
-
-            // 2. Merge two separate array values at the same index to 
-            // be the same value in new array.
-            const mergeArrays = (arrOne, arrTwo) => arrOne.
-            map((item, i) => `${item} ${arrTwo[i]}`).
-            join(', ');
-
-            // 3. Curried function to add a background to array of elms
-            const addBackground = elms => color => {
-              elms.forEach(el => {
-                el.style.backgroundImage = color;
-              });
-            };
-            // 4. Function to get data from API
-            const getData = async url => {
-              const response = await fetch(url);
-              const data = await response.json();
-              return data.data;
-            };
-
-            // 5. Partial Application of addBackground to always apply 
-            // background to the magicalUnderlines constant
-            const addBackgroundToUnderlines = addBackground(magicalUnderlines);
-
-            // GRADIENT FUNCTIONS
-
-            // 1. Build CSS formatted linear-gradient from API data
-            const buildGradient = obj => `linear-gradient(${obj.direction}, ${mergeArrays(obj.colors, obj.positions)})`;
-
-            // 2. Get single gradient from data pulled in array and
-            // apply single gradient to a callback function
-            const applyGradient = async (url, callback) => {
-              const data = await getData(url);
-              const gradient = buildGradient(data[randNumInRange(data.length)]);
-              callback(gradient);
-            };
-
-            // RESULT
-            applyGradient(gradientAPI, addBackgroundToUnderlines);
         </script>
     </body>
 </html>
