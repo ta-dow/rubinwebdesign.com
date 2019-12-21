@@ -11,6 +11,7 @@
 
         <style type="text/css">
             html, body {
+                background-color: #1a1a1a;
                 font: 18px "Montserrat", sans-serif;
                 letter-spacing: 2px;
                 margin: 0;
@@ -51,6 +52,7 @@
                 width: 100%;
                 height: 100%;
                 z-index: 1;
+                transition: opacity 3s ease;
             }
             .slideshow .slideshow-inner {
                 position: absolute;
@@ -153,10 +155,27 @@
                     font-size: 3vw;
                 }
             }
+            #fractals {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 0;
+                height: 100vh;
+                width:  100vw;
+                border: 0;
+                opacity: 0;
+                transition: opacity 5s ease;
+            }
+            #fractals iframe {
+                height: 100%;
+                width:  100%;
+                border: 0;
+            }
         </style>
     </head>
     <body>
         <main>
+            <div id="fractals"></div>
             <section class="slideshow">
                 <div class="slideshow-inner">
                     <div class="slides">
@@ -229,7 +248,7 @@
         </main>
         <script type="text/javascript">
             var slideshowDuration = 4000;
-            var slideshow=$('main .slideshow');
+            var slideshow = $('main .slideshow');
 
             function slideshowSwitch(slideshow, index, auto) {
               if (slideshow.data('wait')) return;
@@ -379,64 +398,85 @@
             }
 
             function slideshowNext(slideshow,previous,auto){
-              var slides=slideshow.find('.slide');
-              var activeSlide=slides.filter('.is-active');
-              var newSlide=null;
-              if(previous){
-                newSlide=activeSlide.prev('.slide');
-                if(newSlide.length === 0) {
-                  newSlide=slides.last();
+                var slides = slideshow.find('.slide');
+                var activeSlide = slides.filter('.is-active');
+                var newSlide = null;
+                if (previous) {
+                    newSlide = activeSlide.prev('.slide');
+                    if (newSlide.length === 0) {
+                      newSlide = slides.last();
+                    }
+                } else {
+                    newSlide = activeSlide.next('.slide');
+                    if (newSlide.length==0)
+                      newSlide = slides.filter('.slide').first();
                 }
-              } else {
-                newSlide=activeSlide.next('.slide');
-                if(newSlide.length==0)
-                  newSlide=slides.filter('.slide').first();
-              }
-
-              slideshowSwitch(slideshow,newSlide.index(),auto);
+    
+                slideshowSwitch(slideshow,newSlide.index(),auto);
             }
 
-            function homeSlideshowParallax(){
-              var scrollTop=$(window).scrollTop();
-              if(scrollTop>windowHeight) return;
-              var inner=slideshow.find('.slideshow-inner');
-              var newHeight=windowHeight-(scrollTop/2);
-              var newTop=scrollTop*0.8;
-
-              inner.css({
-                transform:'translateY('+newTop+'px)',height:newHeight
-              });
+            function homeSlideshowParallax() {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > windowHeight) return;
+                var inner = slideshow.find('.slideshow-inner');
+                var newHeight = windowHeight-(scrollTop/2);
+                var newTop = scrollTop*0.8;
+    
+                inner.css({
+                    transform: 'translateY('+newTop+'px)',
+                    height: newHeight,
+                });
             }
 
             $(document).ready(function() {
-             $('.slide').addClass('is-loaded');
+                $('.slide').addClass('is-loaded');
 
-             $('.slideshow .arrows .arrow').on('click',function(){
-              slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
+                $('.slideshow .arrows .arrow').on('click',function() {
+                    slideshowNext($(this).closest('.slideshow'), $(this).hasClass('prev'));
+                });
+
+                $('.slideshow .pagination .item').on('click',function() {
+                    slideshowSwitch($(this).closest('.slideshow'), $(this).index());
+                });
+
+                $('.slideshow .pagination').on('check',function() {
+                    var slideshow = $(this).closest('.slideshow');
+                    var pages = $(this).find('.item');
+                    var index = slideshow.find('.slides .is-active').index();
+                    pages.removeClass('is-active');
+                    pages.eq(index).addClass('is-active');
+                });
+
+                var timeout = setTimeout(function() {
+                    slideshowNext(slideshow,false,true);
+                }, slideshowDuration);
+
+                slideshow.data('timeout',timeout);
             });
 
-             $('.slideshow .pagination .item').on('click',function(){
-              slideshowSwitch($(this).closest('.slideshow'),$(this).index());
-            });
-
-             $('.slideshow .pagination').on('check',function(){
-              var slideshow=$(this).closest('.slideshow');
-              var pages=$(this).find('.item');
-              var index=slideshow.find('.slides .is-active').index();
-              pages.removeClass('is-active');
-              pages.eq(index).addClass('is-active');
-            });
-
-            var timeout=setTimeout(function(){
-              slideshowNext(slideshow,false,true);
-            },slideshowDuration);
-
-            slideshow.data('timeout',timeout);
-            });
-
-            if($('main .slideshow').length > 1) {
-              $(window).on('scroll',homeSlideshowParallax);
+            if ($('main .slideshow').length > 1) {
+                $(window).on('scroll',homeSlideshowParallax);
             }
+
+            // Konami key combo cheat detector
+            const konami = "38,38,40,40,37,39,37,39,66,65"
+            let kkeys = []
+            $(document).on("keydown", function(e) {
+                kkeys.push(e.keyCode);
+                if (kkeys.toString().indexOf(konami) >= 0) {
+                    window.konami_on = true;    // User entered Konami Code
+                    kkeys = [];
+                    console.log('Konami cheats activated!');
+                    
+                    const fractals_container = document.querySelector('#fractals')
+                    const fractals = document.createElement('iframe')
+                    fractals.src = 'fractal/index.html'
+                    fractals_container.appendChild(fractals)
+
+                    document.querySelector('.slideshow').style.opacity = 0
+                    fractals_container.style.opacity = 1
+                }
+            });
         </script>
     </body>
 </html>
