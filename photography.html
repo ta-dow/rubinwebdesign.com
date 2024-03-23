@@ -21,7 +21,7 @@
                     <a href="design.html" class="effect-underline" style="margin: 0 1vw">DESIGN</a>
                     <a href="photography.html" style="margin: 0 1vw; border-bottom: 1px solid black; display: inline-block; line-height: 1.85;">PHOTOS</a>
                     <a href="blog.html" class="effect-underline" style="margin: 0 1vw">BLOG</a>
-                    <a href="contact.html" class="effect-underline" style="margin: 0 1vw">ABOUT</a>
+                    <a href="about.html" class="effect-underline" style="margin: 0 1vw">ABOUT</a>
                 </nav>
             </div>
             <div class="toc-container">
@@ -53,21 +53,16 @@
                         <img src="static/images/leaf-right.png" class="leaf-image" style="float: right;">
                     </div>
                     <p>
-                        We specialize in portrait and commercial photography, bringing to life exciting places and sharing the stories of fascinating people. In today’s digital world, clean photography plays a major role in advertising. Be it for a restaurant, a travel agency, a product, or anything in between, professional photographs which convey a feeling are key to growing your business. This is why we are excited to include freelance photography in our web development packages or independently as a side-service. Book a free meeting with us by <a href="mailto:gabriellemichaud@icloud.com?Subject=Rubin%20Design" target="_blank" class="underline-highlight">email</a> or through <a href="https://calendly.com/rubindesign/calendar" target="_blank" class="underline-highlight">Calendly</a> to get started.
+                        We specialize in portrait and commercial photography, bringing to life exciting places and sharing the stories of fascinating people. In today’s digital world, clean photography plays a major role in advertising. Be it for a restaurant, a travel agency, a product, or anything in between, professional photographs which convey a feeling are key to growing your business. This is why we are excited to include freelance photography in our web development packages or independently as a side-service.
                     </p>
                     <hr>
                     <br><br>
-
+                    <!-- Portraits -->
                     <div style="max-width: 400px">
                         <img src="static/images/leaf-left.png" class="leaf-image" style="float: left;">
                         <h1 id="portraits" style="display: inline-block;">portraits</h1>
                         <img src="static/images/leaf-right.png" class="leaf-image" style="float: right;">
                     </div>
-        	    	
-                    <img src="static/images/nep-nina.jpg" class="main-image" style="margin-top: 50px">
-
-        	        <img src="static/images/nep-menuka.jpg" class="main-image">
-
                     <div class="row">
                         <div class="col-md-6">
                             <img src="static/images/portrait-1.jpg" class="main-image">
@@ -76,56 +71,29 @@
                             <img src="static/images/portrait-3.jpg" class="main-image">
                         </div>
                     </div>
-
-                    <img src="static/images/portrait-4.jpg" class="main-image">
-
                     <img src="static/images/portrait-5.jpg" class="main-image">
                     <br><br>
                     <hr>
-
                     <br><br><br><br>
+                    <!-- Lifestyle -->
                     <div style="max-width: 400px">
                         <img src="static/images/leaf-left.png" class="leaf-image" style="float: left;">
                         <h1 id="lifestyle" style="display: inline-block;">lifestyle</h1>
                         <img src="static/images/leaf-right.png" class="leaf-image" style="float: right;">
                     </div>
                     <img src="static/images/nyc-ferry.jpg" class="main-image" style="margin-top: 50px">
-
-                    <div class="row">
-                        <div class="col-md-6">
-        	                <img src="static/images/nep-tombstones.jpg" class="main-image">
-                        </div>
-                        <div class="col-md-6">
-        	                <img src="static/images/nyc-chinatown.jpg" class="main-image">
-                        </div>
-                    </div>
-
                     <img src="static/images/mex-scuba-diver.jpg" class="main-image">
-
-
-                    <img src="static/images/nepal.jpg" class="main-image">
-
-                    <div class="row">
-                        <div class="col-md-6">
-        	                <img src="static/images/cam-silhouette.jpg" class="main-image">
-                        </div>
-                        <div class="col-md-6">
-        	                <img src="static/images/cam-temple.jpg" class="main-image">
-                        </div>
-                    </div>
                     <br><br>
                     <hr>
-
                     <br><br><br><br>
+                    <!-- Wildlife -->
                     <div style="max-width: 400px">
                         <img src="static/images/leaf-left.png" class="leaf-image" style="float: left;">
                         <h1 id="wildlife" style="display: inline-block;">wildlife</h1>
                         <img src="static/images/leaf-right.png" class="leaf-image" style="float: right;">
                     </div>
-        	        <img src="static/images/cam-monkey.jpg" class="main-image" style="margin-top: 50px">
-
-                	<img src="static/images/nep-yak.jpg" class="main-image">
-
+        	        <img src="static/images/nep-yak.jpg" class="main-image" style="margin-top: 50px">
+                	<img src="static/images/cam-monkey.jpg" class="main-image">
                     <img src="static/images/cam-cat.jpg" class="main-image">
                     <br><br><br>
                     <hr>
@@ -144,149 +112,156 @@
                 </div>
             </div>
             <footer>
-                <nav>
                     <a href="index.html">
-                        <img src="static/images/logo.png" class="logo">
-                        <br>
-                        Rubin Web Design © 2022
+                        <small>
+                            <img src="static/images/favicon.png" class="logo">
+                            <br>
+                            Rubin Web Design <span id="copyrightYear"></span>
+                        </small>
                     </a>
-                </nav>
-                <br>
-            </footer>
-        </center>
+                </footer>
+                <br><br>
+                <script>
+                    function updateCopyrightYear() {
+                        const currentYear = new Date().getFullYear();
+                        document.getElementById("copyrightYear").textContent = currentYear;
+                    }
+                    updateCopyrightYear();
+                </script>
 
-        <script>
-            function ready(fn) {
-                document.addEventListener('DOMContentLoaded', fn, false)
-            }
+            <script>
+                function ready(fn) {
+                    document.addEventListener('DOMContentLoaded', fn, false)
+                }
 
-            ready(() => {
-                const motionQuery = window.matchMedia('(prefers-reduced-motion)')
+                ready(() => {
+                    const motionQuery = window.matchMedia('(prefers-reduced-motion)')
 
-                const TableOfContents = {
-                    container: document.querySelector('.js-toc'),
-                    links: null,
-                    headings: null,
-                    intersectionOptions: {
-                        rootMargin: '0px',
-                        threshold: 1
-                    },
-                    previousSection: null,
-                    observer: null,
+                    const TableOfContents = {
+                        container: document.querySelector('.js-toc'),
+                        links: null,
+                        headings: null,
+                        intersectionOptions: {
+                            rootMargin: '0px',
+                            threshold: 1
+                        },
+                        previousSection: null,
+                        observer: null,
 
-                    init() {
-                        this.handleObserver = this.handleObserver.bind(this)
+                        init() {
+                            this.handleObserver = this.handleObserver.bind(this)
 
-                        this.setUpObserver()
-                        this.findLinksAndHeadings()
-                        this.observeSections()
+                            this.setUpObserver()
+                            this.findLinksAndHeadings()
+                            this.observeSections()
 
 
-                        this.links.forEach(link => {
-                            link.addEventListener('click', this.handleLinkClick.bind(this))
-                        })
-                    },
-                    
+                            this.links.forEach(link => {
+                                link.addEventListener('click', this.handleLinkClick.bind(this))
+                            })
+                        },
+                        
 
-                    handleLinkClick(evt) {
-                        evt.preventDefault()
-                        let id = evt.target.getAttribute('href').replace('#', '')
+                        handleLinkClick(evt) {
+                            evt.preventDefault()
+                            let id = evt.target.getAttribute('href').replace('#', '')
 
-                        let section = this.headings.find(heading => {
-                            return heading.getAttribute('id') === id
-                        })
+                            let section = this.headings.find(heading => {
+                                return heading.getAttribute('id') === id
+                            })
 
-                        section.setAttribute('tabindex', -1)
-                        section.focus()
+                            section.setAttribute('tabindex', -1)
+                            section.focus()
 
-                        window.scroll({
-                            behavior: motionQuery.matches ? 'instant' : 'smooth',
-                            top: section.offsetTop - 15,
-                            block: 'start'
-                        })
+                            window.scroll({
+                                behavior: motionQuery.matches ? 'instant' : 'smooth',
+                                top: section.offsetTop - 15,
+                                block: 'start'
+                            })
 
-                        if (this.container.classList.contains('is-active')) {
-                            this.container.classList.remove('is-active')
-                        }
-                    },
+                            if (this.container.classList.contains('is-active')) {
+                                this.container.classList.remove('is-active')
+                            }
+                        },
 
-                    handleObserver(entries, observer) {
-                        entries.forEach(entry => {
-                            let href = `#${entry.target.getAttribute('id')}`,
-                                link = this.links.find(l => l.getAttribute('href') === href)
-                            
+                        handleObserver(entries, observer) {
+                            entries.forEach(entry => {
+                                let href = `#${entry.target.getAttribute('id')}`,
+                                    link = this.links.find(l => l.getAttribute('href') === href)
+                                
 
-                            if (entry.isIntersecting && entry.intersectionRatio >= 1) {
-                                link.classList.add('is-visible')
-                                this.previousSection = entry.target.getAttribute('id')
-                            } else {
-                                link.classList.remove('is-visible')
+                                if (entry.isIntersecting && entry.intersectionRatio >= 1) {
+                                    link.classList.add('is-visible')
+                                    this.previousSection = entry.target.getAttribute('id')
+                                } else {
+                                    link.classList.remove('is-visible')
+                                }
+
+                                this.highlightFirstActive()
+                            })
+                        },
+
+                        highlightFirstActive() {
+                            let firstVisibleLink = this.container.querySelector('.is-visible')
+
+                            this.links.forEach(link => {
+                                link.classList.remove('is-active')
+                            })
+
+                            if (firstVisibleLink) {
+                                firstVisibleLink.classList.add('is-active')
                             }
 
-                            this.highlightFirstActive()
-                        })
-                    },
+                            if (!firstVisibleLink && this.previousSection) {
+                                this.container.querySelector(
+                                    `a[href="#${this.previousSection}"]`
+                                ).classList.add('is-active')
+                            }
+                        },
 
-                    highlightFirstActive() {
-                        let firstVisibleLink = this.container.querySelector('.is-visible')
+                        observeSections() {
+                            this.headings.forEach(heading => {
+                                this.observer.observe(heading)
+                            })
+                        },
 
-                        this.links.forEach(link => {
-                            link.classList.remove('is-active')
-                        })
+                        setUpObserver() {
+                            this.observer = new IntersectionObserver(
+                                this.handleObserver,
+                                this.intersectionOptions
+                            )
+                        },
 
-                        if (firstVisibleLink) {
-                            firstVisibleLink.classList.add('is-active')
+                        findLinksAndHeadings() {
+                            this.links = [...this.container.querySelectorAll('a')]
+                            this.headings = this.links.map(link => {
+                                let id = link.getAttribute('href')
+                                return document.querySelector(id)
+                            })
                         }
-
-                        if (!firstVisibleLink && this.previousSection) {
-                            this.container.querySelector(
-                                `a[href="#${this.previousSection}"]`
-                            ).classList.add('is-active')
-                        }
-                    },
-
-                    observeSections() {
-                        this.headings.forEach(heading => {
-                            this.observer.observe(heading)
-                        })
-                    },
-
-                    setUpObserver() {
-                        this.observer = new IntersectionObserver(
-                            this.handleObserver,
-                            this.intersectionOptions
-                        )
-                    },
-
-                    findLinksAndHeadings() {
-                        this.links = [...this.container.querySelectorAll('a')]
-                        this.headings = this.links.map(link => {
-                            let id = link.getAttribute('href')
-                            return document.querySelector(id)
-                        })
                     }
-                }
-                TableOfContents.init()
-            });
-        </script>
+                    TableOfContents.init()
+                });
+            </script>
 
-        <script>
-            const doesntLikeAnimations = window.matchMedia('(prefers-reduced-motion)').matches
+            <script>
+                const doesntLikeAnimations = window.matchMedia('(prefers-reduced-motion)').matches
 
-            if (doesntLikeAnimations) {
-                console.log('Not enabling smooth scrolling due to users browser preference.')
-            } else {
-                // enable smooth scrolling for all anchor links
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
+                if (doesntLikeAnimations) {
+                    console.log('Not enabling smooth scrolling due to users browser preference.')
+                } else {
+                    // enable smooth scrolling for all anchor links
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
 
-                        document.querySelector(this.getAttribute('href')).scrollIntoView({
-                            behavior: 'smooth'
+                            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                                behavior: 'smooth'
+                            });
                         });
                     });
-                });
-            }
-        </script>
+                }
+            </script>
+        </center>
     </body>
 </html>

@@ -100,7 +100,7 @@ a:hover {
 /*images*/
 .main-image {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 30px;
     border-radius: 6px;
     box-shadow: 0 1px 1px rgba(0,0,0,0.08), 
                 0 2px 2px rgba(0,0,0,0.08), 
@@ -121,7 +121,6 @@ a:hover {
 .img-demo-site {
     width: 100%;
     padding: 45px 0;
-
 }
 .leaf-image {
     width: 14%;
@@ -194,15 +193,15 @@ a:hover {
     text-transform: uppercase;
     border-radius: 50px;
     box-shadow: 2px 4px 10px -5px rgb(179, 145, 95);
-    background-color: #e88945;
-    border-color: #e88945;
+    background-color: #353535;
+    border-color: #353535;
     transition: .4s ease;
 }
 .fancy-button:hover {
-    background-color: #353535;
-    border-color: #353535;
+    background-color: #e88945;
+    border-color: #e88945;
     color: #fcfcfc;
-    box-shadow: 1px 5px 10px -3px rgb(53, 53, 53);
+    box-shadow: 1px 5px 10px -3px rgb(0 0 0 / 30%);
 }
 
 

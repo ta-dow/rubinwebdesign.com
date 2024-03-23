@@ -21,7 +21,7 @@
                     <a href="design.html" class="effect-underline" style="margin: 0 1vw">DESIGN</a>
                     <a href="photography.html" class="effect-underline" style="margin: 0 1vw">PHOTOS</a>
                     <a href="blog.html" style="margin: 0 1vw; border-bottom: 1px solid black; display: inline-block; line-height: 1.85;">BLOG</a>
-                    <a href="contact.html" class="effect-underline" style="margin: 0 1vw">ABOUT</a>
+                    <a href="about.html" class="effect-underline" style="margin: 0 1vw">ABOUT</a>
                 </nav>
                 <br><br><br>
                 <div class="container-fluid">
@@ -83,7 +83,7 @@
                             <a href="portraits.html">
                                 <h1>Portrait Photography Tips</h1>
                                 <br>
-                                <img src="static/images/nep-menuka.jpg" class="blog-image">
+                                <img src="static/images/nep-nina.jpg" class="blog-image">
                             <br><br>
                             <div class="blog-description">
                                 Everyone has a story. Make sure your portrait shots are as interesting as your model and accurately reflect their story.
@@ -99,15 +99,22 @@
                 </div>
                 <br><br> 
                 <footer>
-                    <nav>
-                        <a href="index.html">
-                            <img src="static/images/logo.png" class="logo">
+                    <a href="index.html">
+                        <small>
+                            <img src="static/images/favicon.png" class="logo">
                             <br>
-                            Rubin Web Design © 2022
-                        </a>
-                    </nav>
-                    <br>
+                            Rubin Web Design <span id="copyrightYear"></span>
+                        </small>
+                    </a>
                 </footer>
+                <br><br>
+                <script>
+                    function updateCopyrightYear() {
+                        const currentYear = new Date().getFullYear();
+                        document.getElementById("copyrightYear").textContent = currentYear;
+                    }
+                    updateCopyrightYear();
+                </script>
             </center>
         </div>
     </body>

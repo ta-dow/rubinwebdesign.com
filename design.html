@@ -22,7 +22,7 @@
                     <a href="design.html" style="margin: 0 1vw; border-bottom: 1px solid black; display: inline-block; line-height: 1.85;">DESIGN</a>
                     <a href="photography.html" class="effect-underline" style="margin: 0 1vw;">PHOTOS</a>
                     <a href="blog.html" class="effect-underline" style="margin: 0 1vw">BLOG</a>
-                    <a href="contact.html" class="effect-underline" style="margin: 0 1vw">ABOUT</a>
+                    <a href="about.html" class="effect-underline" style="margin: 0 1vw">ABOUT</a>
                 </nav>
                 <br><br><br>
                 <div style="max-width: 400px">
@@ -37,28 +37,7 @@
                 </p>
                 <br>
                 <div class="container-fluid" style="width: calc(100% - 20px)">
-                    <br>
                     <div class="row">
-                        <div class="col-md-4">
-                            <a href="https://vanlifemedic.com/" target="_blank">
-                                <div class="img-fluid img-demo-site">
-                                    <img src="static/images/pixelmac-vanlife.png" style="width: 80%" alt="computer and mobile screenshot of vanlife medic blog site">
-                                    <br>
-                                    <hr style="width: 80%">
-                                    <h1 class="demo-site">Vanlife Medic</h1>
-                                </div>
-                            </a> 
-                        </div>
-                        <div class="col-md-4">
-                            <a href="https://meap99.org/" target="_blank">
-                                <div class="img-fluid img-demo-site">
-                                    <img src="static/images/pixelmac-meap.png" style="width: 80%" alt="computer and mobile screenshot of MEAP - Music Education Assistance Project - website">
-                                    <br>
-                                    <hr style="width: 80%">
-                                    <h1 class="demo-site">MEAP</h1>
-                                </div>
-                            </a> 
-                        </div>
                         <div class="col-md-4">
                             <a href="https://ta-dow.github.io/himalayanexpeditions.com/" target="_blank">
                                 <div class="img-fluid img-demo-site">
@@ -66,18 +45,6 @@
                                     <br>
                                     <hr style="width: 80%">
                                     <h1 class="demo-site">Demo Expeditions</h1>
-                                </div>
-                            </a> 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <a href="https://katinkarubin.com/" target="_blank">
-                                <div class="img-fluid img-demo-site">
-                                    <img src="static/images/pixelmac-faces.png" style="width: 80%" alt="computer and mobile screenshot of Katinka Rubin's face of hudson website gallery">
-                                    <br>
-                                    <hr style="width: 80%">
-                                    <h1 class="demo-site">Faces of Hudson</h1>
                                 </div>
                             </a> 
                         </div>
@@ -108,7 +75,7 @@
                 <br><br>
                 <h1>want to work together?</h1>
                 <p style="max-width: 900px">
-                    If you're interested in collaborating, book a meeting with us by <a href="mailto:gabriellemichaud@icloud.com?Subject=Rubin%20Design" target="_blank" class="underline-highlight">email</a> or through <a href="https://calendly.com/rubindesign/calendar" target="_blank" class="underline-highlight">Calendly</a>. This will let us get a sense of your project, provide an estimate, and to learn about your unique style. This preliminatry consultation is free.
+                    If you're interested in collaborating, book a meeting with us through <a href="https://calendly.com/rubindesign/calendar" target="_blank" class="underline-highlight">Calendly</a>. This will let us get a sense of your project, provide an estimate, and to learn about your unique style.
                 </p>
                 <a href="https://calendly.com/rubindesign/calendar" target="_blank" class="fancy-button">
                     &nbsp; SCHEDULE A MEETING &nbsp;
@@ -123,40 +90,30 @@
                 </div>
                 <br><br>
                 <img src="static/images/monadical-card.png" class="main-image" alt="Monadical business card mockup">
-                <br><br><br><br>
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="static/images/beetle.png" style="width: 90%; border-radius: 50%" alt="handmade Illustrator drawing of blue beetle">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="static/images/beetle2.png" style="width: 90%; border-radius: 50%" alt="handmade Illustrator drawing of yellow beetle">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="static/images/nepal.png" style="width: 100%" alt="handmade Illustrator drawing of Everest">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="static/images/adirondacks.png" style="width: 100%" alt="handmade Illustrator drawing of the Adirondacks">
-                    </div>
-                </div>
+                <br><br>
                 <p style="max-width: 900px">
                     Outside of making websites, we enjoy working on graphic design and photography projects. We have experience creating logos, album covers, and business cards, but we're always up for a challenge.
                 </p>
-                <a href="photography.html" class="fancy-button">
-                    view our photo gallery
-                </a>
-                <br><br>
+                <br>
                 <hr>
                 <br><br>
                 <footer>
-                    <nav>
-                        <a href="index.html">
-                            <img src="static/images/logo.png" class="logo" alt="rubin logo">
+                    <a href="index.html">
+                        <small>
+                            <img src="static/images/favicon.png" class="logo">
                             <br>
-                            Rubin Web Design © 2022
-                        </a>
-                    </nav>
-                    <br>
+                            Rubin Web Design <span id="copyrightYear"></span>
+                        </small>
+                    </a>
                 </footer>
+                <br><br>
+                <script>
+                    function updateCopyrightYear() {
+                        const currentYear = new Date().getFullYear();
+                        document.getElementById("copyrightYear").textContent = currentYear;
+                    }
+                    updateCopyrightYear();
+                </script>
             </center>
         </div>
     </body>
